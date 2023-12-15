@@ -19,7 +19,7 @@ a:hover {
 
 button {
 	cursor: pointer;
-	text-transform: uppercase;
+	text-transform: underline;
 }
 
 #info {

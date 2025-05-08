@@ -306,18 +306,18 @@
 
 
 
-			// for ( let i = 0; i < NUM_SPHERES; i ++ ) {
-			// 	const sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
-			// 	sphere.castShadow = true;
-			// 	sphere.receiveShadow = true;
-			// 	scene.add( sphere );
-			// 	spheres.push( {
-			// 		mesh: sphere,
-			// 		collider: new THREE.Sphere( new THREE.Vector3( 0, - 100, 0 ), SPHERE_RADIUS ),
-			// 		velocity: new THREE.Vector3()
-			// 	} );
+			for ( let i = 0; i < NUM_SPHERES; i ++ ) {
+				const sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
+				sphere.castShadow = true;
+				sphere.receiveShadow = true;
+				scene.add( sphere );
+				spheres.push( {
+					mesh: sphere,
+					collider: new THREE.Sphere( new THREE.Vector3( 0, - 100, 0 ), SPHERE_RADIUS ),
+					velocity: new THREE.Vector3()
+				} );
 
-			// }
+			}
 
 			const worldOctree = new Octree();
 			const playerCollider = new Capsule( new THREE.Vector3( 0, 0.35, 0 ), new THREE.Vector3( 0, 1, 0 ), 0.35 );
